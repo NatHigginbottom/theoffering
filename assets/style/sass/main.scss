@@ -1,0 +1,365 @@
+@import url(http://fonts.googleapis.com/css?family=EB+Garamond);
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "base/base";
+
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+$accent-color: #88089B;
+$secondary-color: #E10081;
+$light-grey: #f1f1f1;
+
+* {
+	font-family: "EB Garamond", serif;
+}
+
+body {
+	margin: 0;
+}
+
+section {
+	min-height: 100vh;
+}
+
+#fold {
+	// background-image: url(/assets/img/pattern.png);
+	// background-size: 10%;
+	@include linear-gradient(to right, $accent-color, $secondary-color, $fallback: $secondary-color);
+	min-height: 1px;
+	padding: 2.5rem 0 1.5rem;
+	.logo-container {
+		img.logo {
+			width: 50vw;
+			margin-left: 25vw;
+			display: block;
+		}
+		.credits {
+			text-align: center;
+			margin-top: 2rem;
+			color: white;
+			p {
+				width: 100%;
+				margin-top: .5rem;
+				font-size: 1.25rem;
+				&.links {
+					margin-top: 2rem;
+					a {
+						margin: 0 1rem;
+						color: white;
+						i {
+							font-size: 0.8em;
+							margin-right: 0.5em;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#funders-partners {
+	display: flex;
+	flex-direction: column;
+	min-height: 1px;
+	> * {
+		width: 100vw;
+		padding: 2rem;
+		h2 {
+			font-family: "EB Garamond", serif;
+			font-weight: normal;
+			font-size: 1.25rem;
+			color: #252525;
+		}
+		ul {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			li {
+				a {
+					img {
+						margin-top: 0.5rem;
+						height: 3rem;
+					}
+				}
+			}
+		}
+	}
+	.partners,
+	.funders {
+		h2 {
+			text-align: center;
+		}
+		ul {
+			justify-content: center;
+			li {
+				margin-left: 1rem;
+				margin-right: 1em;
+			}
+		}
+	}
+	.partners {
+		padding-top: 0;
+	}
+}
+
+// Parallax
+	/* fullscreen setup */
+	html, body {
+	    /* give this to all tags from html to .fullscreen */
+	    height:100%;
+	}
+	.fullscreen {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.fullscreen,
+	.content-a {
+	    width:100%;
+	    min-height:100%;
+	}
+	.not-fullscreen,
+	.not-fullscreen .content-a,
+	.fullscreen.not-overflow,
+	.fullscreen.not-overflow .content-a {
+	    min-height:100%;
+	    overflow:hidden;
+	}
+
+	/* content centering styles */
+	.content-a {
+	    display:table;
+	    @include outer-container;
+	}
+	.content-b {
+	    display:table-cell;
+	    position:relative;
+	    vertical-align:middle;
+	    @include outer-container;
+		color: white;
+		font-size: 1.75rem;
+		padding: 0 2.5vw; 
+		margin-bottom: 0;
+		text-shadow: 0 0 5px black;
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+#production-shots {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	img {
+		width: (100 / 6) + vw;
+		height: 11vw;
+	}
+}
+
+#team {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	.container {
+		padding: 0 2.5vw;
+		> div {
+			@include outer-container;
+			* {
+				display: inline;
+				color: $accent-color;
+			}
+			h2 {
+				display: block;
+				text-transform: uppercase;
+				margin-bottom: 0;
+				font-family: "script", "EB Garamond", serif;
+				font-sie: 1.5rem;
+			}
+			dl {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: flex-start;
+				div {
+
+				}
+				dt {
+					font-weight: normal;
+					color: $secondary-color;
+					font-family: "script", "EB Garamond", serif;
+				}
+				dd {
+					margin-right: 1rem;
+				}
+			}
+		}
+		.crew h2 {
+			margin-top: 2.5vw;
+		}
+	}
+}
+
+#future {
+	display: flex;
+	flex-direction: column;
+	> * {
+		min-height: 1px;
+	}
+	.about {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 5vw 2.5vw;
+		p {
+			margin-bottom: 0 !important;
+			&:last-child {
+				margin-bottom: 1em;
+			}
+		}
+		* {
+			font-size: 1.25rem;
+		}
+		> * {
+			@include outer-container;
+		}
+	}
+	.bios {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		> li {
+			width: 50vw;
+			img {
+				width: 100%;
+			}
+			.inner {
+				padding: 2.5vw;
+				padding-bottom: 3.5vw;
+				p {
+					margin-bottom: 2.5vw;
+				}
+				a {
+					font-weight: 700;
+					text-decoration: none;
+					color: $accent-color;
+					font-family: "script", "EB Garamond", serif;
+					font-size: 1.25rem;
+					margin-right: .25rem;
+					font-weight: 500;
+				}
+				ul.filmography {
+					padding-bottom: 2.5vw;
+				}
+				ul.links {
+					display: block;
+					li {
+						display: inline;
+						a {
+							font-size: .8rem;
+							margin-right: .5rem;
+						}
+					}
+				}
+				.name {
+					color: $accent-color;
+					font-weight: 500;
+				}
+			}
+			&:nth-child(2) .inner {
+				a {
+					color: $secondary-color;
+				}
+				.name {
+					color: $secondary-color;
+				}
+			}
+			&.collaborator {
+				width: 20vw;
+				text-align: center;
+				p, h1 {
+					margin-bottom: .5rem;
+					margin-top: .5rem;
+					font-weight: 500;
+				}
+				p {
+					margin-bottom: 0;
+				}
+				h1 a.p {
+					color: $secondary-color;
+				}
+			}
+		}
+	}
+}
+
+#dance-film {
+	min-height: 1px;
+	a {
+		display: block;
+		color: white;
+		padding: 2rem;
+		@include linear-gradient(to right, $accent-color, $secondary-color, $fallback: $secondary-color);
+		color: white;
+		text-align: center;
+		font-size: 1.5rem;
+		@include transition;
+	}
+}
+
+#copyright {
+	text-align: center;
+	padding: 1rem 0;
+	p {
+		margin-bottom: 0;
+		a {
+			color: $accent-color;
+			text-decoration: underline;
+		}
+	}
+}
+
+#opportunity {
+	@include outer-container;
+	padding: 0 2em;
+	margin-top: 2em;
+	a.back {
+		color: $accent-color;
+		text-decoration: underline;
+		margin-bottom: 1.5rem;
+		display: block;
+	}
+	h2 {
+		font-family: "EB Garamond", serif;
+		font-size: 2em;
+	}
+	h3 {
+		font-family: "EB Garamond", serif;
+		margin-bottom: 2rem;
+		line-height: 1.5;
+	}
+	p {
+		margin-bottom: 1.5em;
+		a {
+			color: $accent-color;
+			text-decoration: underline;
+		}
+	}
+	ul {
+		li {
+			list-style-type: circle;
+			margin-bottom: 0.75em;
+			margin-left: 1.25em;
+			&:last-child {
+				margin-bottom: 1.5em;
+			}
+		}
+	}
+}
+
+@import "responsive";

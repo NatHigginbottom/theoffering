@@ -1,0 +1,215 @@
+@media screen and (max-width: 800px) {
+	section {
+		min-height: 50vh;
+	}
+
+	#fold {
+		padding: 2.5rem 0;
+		.cycle-bg-image {
+			background-image: url(/assets/img/fold-bg.png) !important;
+			opacity: 1 !important;
+		}
+
+		.logo-container img.logo {
+			width: 75vw;
+			margin-left: 12.5vw;
+		}
+
+		.bottom {
+			bottom: 2rem;
+		}
+
+		i.fa {
+			display: none;
+		}
+
+		img.cff {
+			display: none;
+		}
+
+		.logo-container .credits {
+			padding: 0 2rem;
+			p {
+				font-size: 1rem;
+			}
+			p.staring {
+				margin-bottom: 0;
+			}
+			p.links {
+				display: none;
+			}
+		}
+	}
+
+	#funders-partners {
+		flex-wrap: wrap;
+		flex-direction: column;
+		> * {
+			width: 100vw;
+			h2 {
+				text-align: center;
+			}
+		}
+		.funders ul {
+			justify-content: center;
+			li {
+				margin: 0 1rem;
+			}
+		}
+		.partners {
+			padding-top: 0;
+			h2 {
+				text-align: center;
+			}
+			ul {
+				justify-content: center;
+				li {
+					margin: 0 1rem;
+				}
+			}
+		}
+	}
+
+	.fullscreen.background.parallax {
+		background-image: none !important;
+		background-color: $accent-color;
+		min-height: 1px !important;
+		.content-b {
+			text-shadow: none;
+			font-size: 1.25rem;
+			padding: 4rem 2rem;
+		}
+	}
+
+	#twitter-feed {
+		padding: 0;
+		ul {
+			display: block;
+			li {
+				display: block;
+				width: 100vw;
+				border-bottom: 1px solid darken($light-grey, 5%);
+				border-right: 0;
+				padding: 2rem;
+				&:last-child {
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+
+	#team {
+		padding: 2rem 0;
+		.container {
+			padding: 0 2rem;
+		}
+		.container > div {
+			h2 {
+				margin-bottom: 1rem;
+			}
+			dl {
+				dd {
+					@include clearfix;
+					margin-left: .5rem;
+				}
+			}
+		}
+	}
+
+	#trailer {
+		height: 57vw;
+		min-height: 57vw;
+		iframe {
+			height: 57vw;
+		}
+	}
+
+	#future {
+		display: block;
+		> * {
+			width: 100vw;
+			display: block;
+		}
+		.about {
+			padding: 2rem;
+			p {
+				font-size: 1rem;
+				color: #252525;
+			}
+		}
+		.bios {
+			display: block;
+			> li {
+				width: 100vw;
+				.inner {
+					padding: 0;
+					p {
+						padding: 2rem;
+						margin-bottom: 0;
+						display: none;
+						&:first-of-type {
+							display: block;
+						}
+					}
+					ul.filmography {
+						display: none;
+					}
+					ul.links {
+						padding: 0 2rem 2rem 2rem;
+					}
+					div.quote {
+						padding: 2rem;
+					}
+				}
+				&.collaborator {
+					width: 50vw;
+					float: left;
+					h1 {
+						margin-top: .5rem;
+					}
+					p {
+						margin-bottom: 1rem;
+						padding: 0;
+					}
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+
+	#dance-film {
+		display: inline-block;
+		a {
+			font-size: 1rem;
+		}		
+	}
+
+	#production-shots {
+		flex-wrap: wrap;
+		display: flex;
+		img {
+			width: 50vw;
+			height: 33vw;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#future .bios > li.collaborator {
+		width: 100vw;
+		img {
+			display: none;
+		}
+		h1,
+		p {
+			display: inline !important;
+		}
+		margin-bottom: 1em;
+		&:last-child {
+			margin-bottom: 2em;
+		}
+	}
+}
+
