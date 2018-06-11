@@ -386,7 +386,7 @@ html, body {
     flex-direction: row;
     flex-wrap: wrap; }
     #future .bios > li {
-      width: 50vw; }
+      width: 20vw; }
       #future .bios > li img {
         width: 100%; }
       #future .bios > li .inner {
