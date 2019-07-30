@@ -382,6 +382,7 @@ html, body {
         display: table;
         clear: both; }
   #future .bios {
+    align: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; }
