@@ -420,7 +420,7 @@ html, body {
       #future .bios > li:nth-child(2) .inner .name {
         color: #E10081; }
       #future .bios > li.collaborator {
-        width: 20vw;
+        width: 19vw;
         text-align: center; }
         #future .bios > li.collaborator p, #future .bios > li.collaborator h1 {
           margin-bottom: .5rem;
